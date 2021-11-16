@@ -1,0 +1,55 @@
+Module Module1
+
+    Sub Main()
+        '5. Find the count of vowels characters in an entered string separately. 
+
+        Dim str1, thischar As String
+        Dim count, vovA, vovE, vovI, vovO, vovU As Integer
+
+        str1 = ""
+        thischar = ""
+        vovA = 0
+        vovE = 0
+        vovI = 0
+        vovO = 0
+        vovU = 0
+
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine
+        str1 = UCase(str1)
+
+        For count = 1 To Len(str1)
+            thischar = Mid(str1, count, 1)
+            If thischar = "A" Then
+                vovA = vovA + 1
+            End If
+
+            If thischar = "E" Then
+                vovE = vovE + 1
+            End If
+
+            If thischar = "I" Then
+                vovI = vovI + 1
+            End If
+
+            If thischar = "O" Then
+                vovO = vovO + 1
+            End If
+
+            If thischar = "U" Then
+                vovU = vovU + 1
+            End If
+        Next
+
+        Console.WriteLine("A= " & vovA)
+        Console.WriteLine("E= " & vovE)
+        Console.WriteLine("I= " & vovI)
+        Console.WriteLine("O= " & vovO)
+        Console.WriteLine("U= " & vovU)
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
