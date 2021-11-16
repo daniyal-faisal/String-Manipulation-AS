@@ -1,0 +1,31 @@
+Module Module1
+
+    Sub Main()
+        'donuts:
+        'INPUT an INT count of a number of donuts, OUTPUT a string of the form 'Number of donuts: <count>', where <count> is the number
+        'input. However, if the count is 10 or more, then use the word 'many'
+        'instead of the actual count.
+        'So donuts(5) outputs 'Number of donuts: 5'
+        'and donuts(23) outputs 'Number of donuts: many'
+
+        Dim ndonut As Integer
+
+        Console.WriteLine("Donuts? ")
+        ndonut = Console.ReadLine()
+
+        If ndonut >= 0 And ndonut <= 10 Then
+            Console.WriteLine(" no of donuts: " & ndonut)
+        Else
+            Console.WriteLine(" no of donuts: many ")
+
+
+
+        End If
+
+        Console.ReadKey()
+
+
+
+    End Sub
+
+End Module
