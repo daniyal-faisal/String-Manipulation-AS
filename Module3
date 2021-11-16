@@ -1,0 +1,41 @@
+Module Module1
+    'good Faith nospaces
+        Sub Main()
+        Dim thisalpha, Str1 As String
+
+        Dim count, Alphacounter, strlen, numbers As Integer
+
+        Str1 = ""
+        thisalpha = ""
+        count = 0
+        Alphacounter = 0
+        strlen = 0
+        numbers = 0
+
+        Console.WriteLine("Enter string:")
+        Str1 = Console.ReadLine()
+        Str1 = UCase(Str1)
+
+        strlen = Len(Str1)
+
+        For count = 1 To Len(Str1)
+            thisalpha = Mid(Str1, count, 1)
+            If thisalpha = "A" Or thisalpha = "B" Or thisalpha = "C" Or thisalpha = "D" Or thisalpha = "E" Or thisalpha = "F" Or thisalpha = "G" Or thisalpha = "H" Or thisalpha = "I" Or thisalpha = "J" Or thisalpha = "K" Or thisalpha = "L" Or thisalpha = "M" Or thisalpha = "N" Or thisalpha = "O" Or thisalpha = "P" Or thisalpha = "Q" Or thisalpha = "R" Or thisalpha = "S" Or thisalpha = "T" Or thisalpha = "U" Or thisalpha = "V" Or thisalpha = "W" Or thisalpha = "X" Or thisalpha = "Y" Or thisalpha = "Z" Then
+
+                Alphacounter = Alphacounter + 1
+
+            Else
+                numbers = numbers + 1
+            End If
+
+        Next
+        
+
+        Console.WriteLine("String lenghth is: " & strlen)
+        Console.WriteLine("String alphabets are: " & Alphacounter)
+        Console.WriteLine("String numbers are: " & numbers)
+        Console.ReadKey()
+        'good Faith nospaces
+    End Sub
+
+    End Module
