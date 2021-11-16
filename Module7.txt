@@ -1,0 +1,22 @@
+Dim Str1, fleft, fright, newstr : STRING
+
+Str1 = ""
+fleft = ""
+fright = ""
+newstr = ""
+
+OUTPUT("Enter String: ")
+Str1 = INPUT
+
+If Len(Str1) <= 2 Then
+   OUTPUT(Str1)
+
+Else
+
+   fleft = Left(Str1, 2)
+   fright = Right(Str1, 2)
+   newstr = fleft & fright
+
+   OUTPUT(newstr)
+
+End If

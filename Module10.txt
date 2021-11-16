@@ -1,0 +1,16 @@
+DECLARE str1 : STRING
+str1 <-- ""
+
+OUTPUT("Enter string: ")
+str1 <-- INPUT()
+
+If Len(str1) < 3 Then
+
+Else
+	If Right(str1, 3) <> "ing" Then
+            str1 <-- str1 & "ing"
+        ElseIf Right(str1, 3) <-- "ing" Then
+             str1 <-- str1 & "ly"
+        End If
+End If
+OUTPUT(str1)

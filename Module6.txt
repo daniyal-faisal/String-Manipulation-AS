@@ -1,0 +1,11 @@
+DECLARE ndonut : INTEGER
+
+OUTPUT("Donuts? ")
+ndonut <-- INPUT()
+
+If ndonut >= 0 And ndonut <= 10 Then
+    OUTPUT(" no of donuts: " & ndonut)
+  Else
+    OUTPUT(" no of donuts: many ")
+End If
+

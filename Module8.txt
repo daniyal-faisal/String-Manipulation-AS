@@ -1,0 +1,28 @@
+DECLARE Str1, newstr, chracter : STRING
+DECLARE firstchar, thischar : CHRACTER
+DECLARE count : INTEGER
+
+Str1 <-- ""
+newstr <-- ""
+firstchar <-- ""
+thischar <-- ""
+chracter <-- "*"
+count <-- 0
+
+OUTPUT("Enter String: ")
+Str1 <-- INPUT
+
+firstchar <-- Left(Str1, 1)
+newstr <-- firstchar
+
+For count <-- 2 To Len(Str1)
+   thischar <-- Mid(Str1, count, 1)
+
+    If thischar <> firstchar Then
+      newstr <-- newstr & thischar
+    Else
+      newstr <-- newstr & "*"
+    End If
+Next
+
+OUTPUT(newstr)

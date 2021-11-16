@@ -1,0 +1,41 @@
+DECLARE str1, str11, str2, str22, nstr1, nstr2 : STRING
+DECLARE fchar, schar : CHARACTER
+DECLARE space, count1, count2 : INTEGER
+
+str1 <-- ""
+str2 <-- ""
+str11 <-- ""
+str22 <-- ""
+nstr1 <-- ""
+nstr2 <-- ""
+fchar <-- ""
+schar <-- ""
+space <-- 0
+count1 <-- 0
+count2 <-- 0
+
+
+OUTPUT("Enter string1: ")
+str1 <-- INPUT
+
+OUTPUT("Enter string2: ")
+str2 <-- INPUT
+
+
+fchar <-- Left(str1, 1)
+schar <-- Left(str2, 1)
+
+        
+
+For count1 <-- 2 To Len(str1)
+    str11 <-- Mid(str1, count1, 1)
+     nstr1 <-- nstr1 + str11
+Next
+
+
+For count2 <-- 2 To Len(str2)
+   str22 <-- Mid(str2, count2, 1)
+    nstr2 <-- nstr2 + str22
+Next
+
+OUTPUT(schar + nstr1 + " " + fchar + nstr2)

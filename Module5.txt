@@ -1,0 +1,43 @@
+DECLARE str1, thischar : STRING
+DECLARE count, vovA, vovE, vovI, vovO, vovU : INTEGER
+
+str1 <-- ""
+thischar <-- ""
+vovA <-- 0
+vovE <-- 0
+vovI <-- 0
+vovO <-- 0
+vovU <-- 0
+
+Console.Write("Enter String: ")
+str1 <-- INPUT
+str1 <-- UCase(str1)
+
+For count  1 To Len(str1)
+    thischar <-- Mid(str1, count, 1)
+    If thischar = "A" Then
+       vovA <-- vovA + 1
+    End If
+
+     If thischar = "E" Then
+         vovE <-- vovE + 1
+     End If
+
+     If thischar = "I" Then
+         vovI <-- vovI + 1
+     End If
+
+     If thischar = "O" Then
+          vovO <-- vovO + 1
+     End If
+
+     If thischar = "U" Then
+        vovU <-- vovU + 1
+     End If
+Next        
+
+OUTPUT("A<-- " + vovA)
+OUTPUT("E<-- " + vovE)
+OUTPUT("I<-- " + vovI)
+OUTPUT("O<-- " + vovO)
+OUTPUT("U<-- " + vovU)
