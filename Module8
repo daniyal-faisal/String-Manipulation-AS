@@ -1,0 +1,45 @@
+Module Module1
+
+    Sub Main()
+        'Given a string s, return a string
+        'where all occurences of its first char have
+        'been changed to '*', except do not change
+        'the first char itself.
+        'e.g., 'babble' yields 'ba*le' or 'alpha' outputs 'alph'
+        'Assume that the string is length 1 or more
+
+        Dim Str1, newstr, chracter As String
+        Dim firstchar, thischar As Char
+        Dim count As Integer
+
+        Str1 = ""
+        newstr = ""
+        firstchar = ""
+        thischar = ""
+        chracter = "*"
+        count = 0
+
+        Console.WriteLine("Enter String: ")
+        Str1 = Console.ReadLine
+
+        firstchar = Left(Str1, 1)
+        newstr = firstchar
+
+        For count = 2 To Len(Str1)
+            thischar = Mid(Str1, count, 1)
+
+            If thischar <> firstchar Then
+                newstr = newstr & thischar
+            Else
+                newstr = newstr & "*"
+
+
+            End If
+        Next
+
+        Console.WriteLine(newstr)
+        Console.ReadKey()
+
+    End Sub
+
+End Module
