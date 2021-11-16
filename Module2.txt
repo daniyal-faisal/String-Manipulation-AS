@@ -1,0 +1,29 @@
+DECLARE Str1, Newstr, repchar, repwith, thischar : STRING
+DECLARE count : INTEGER
+
+Str1 <-- ""
+Newstr <-- ""
+repchar <-- ""
+repwith <-- ""
+thischar <-- ""
+Count <-- 0
+
+
+OUTPUT("Enter string:")
+Str1 <-- INPUT
+
+OUTPUT("Enter char:")
+repchar <-- INPUT
+
+OUTPUT("Enter new char :")
+repwith <-- INPUT
+
+For Counter <-- 1 To Len(Str1)
+  thischar <-- Mid(Str1, Counter, 1)
+    If thischar = repchar Then
+      thischar <-- repwith
+    End If
+  Newstr <-- Newstr + thischar
+Next
+
+OUTPUT("newstring<--" , Newstr)

@@ -1,0 +1,27 @@
+DECLARE Str1 : STRING
+DECLARE character, thisChar, nextChar : CHRACTER
+DECLARE High, Count, Counter, counting : INTEGER
+
+character <-- ""
+High <-- 0
+Count <-- 0
+
+OUTPUT("Enter String: " )
+Str1 <-- INPUT
+
+For Counter <-- 1 To Len(Str1)
+   nextChar <-- Mid(Str1, Counter, 1)
+    Count <-- 0
+    For counting <-- 1 To Len(Str1)
+       thisChar <-- Mid(Str1, counting, 1)
+        If thisChar = nextChar Then
+	 Count <-- Count + 1
+        Next
+
+        If Count > High Then
+           High = Count
+           character <-- nextChar
+         End If
+Next
+
+OUTPUT(character &  came  & High &  number of times.)
