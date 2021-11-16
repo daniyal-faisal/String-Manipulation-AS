@@ -1,0 +1,48 @@
+Module Module1
+
+    Sub Main()
+        Dim str1, str11, str2, str22, nstr1, nstr2 As String
+        Dim fchar, schar As Char
+        Dim space, count1, count2 As Integer
+
+
+        str1 = ""
+        str2 = ""
+        str11 = ""
+        str22 = ""
+        nstr1 = ""
+        nstr2 = ""
+        fchar = ""
+        schar = ""
+        space = 0
+        count1 = 0
+        count2 = 0
+
+
+        Console.Write("Enter string1: ")
+        str1 = Console.ReadLine
+        Console.Write("Enter string2: ")
+        str2 = Console.ReadLine
+
+
+        fchar = Left(str1, 1)
+        schar = Left(str2, 1)
+
+        
+
+        For count1 = 2 To Len(str1)
+            str11 = Mid(str1, count1, 1)
+            nstr1 = nstr1 & str11
+        Next
+
+
+        For count2 = 2 To Len(str2)
+            str22 = Mid(str2, count2, 1)
+            nstr2 = nstr2 & str22
+        Next
+
+        Console.WriteLine(schar & nstr1 & " " & fchar & nstr2)
+        Console.ReadKey()
+    End Sub
+
+End Module
