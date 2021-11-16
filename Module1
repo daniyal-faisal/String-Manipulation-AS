@@ -1,0 +1,23 @@
+Module Module1
+
+    Sub Main()
+        Dim str1, thisstr As String
+
+        str1 = ""
+        thisstr = ""
+
+        Console.WriteLine("Enter string:")
+        str1 = Console.ReadLine
+        thisstr = UCase(str1)
+
+        If str1 = thisstr Then
+            Console.WriteLine("All alphabets are capitial")
+        Else
+            Console.WriteLine("Alphabets are small.")
+        End If
+        Console.ReadKey()
+
+
+    End Sub
+
+End Module
