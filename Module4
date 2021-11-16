@@ -1,0 +1,34 @@
+Module Module1
+    '4. Find the character that appears most number of times in an entered string and output it.
+    Sub Main()
+        Dim Str1 As String
+        Dim character, thisChar, nextChar As Char
+        Dim High, Count, Counter, counting As Integer
+
+        character = ""
+        High = 0
+        Count = 0
+
+        Console.Write("Enter String: ")
+        Str1 = Console.ReadLine
+
+        For Counter = 1 To Len(Str1)
+            nextChar = Mid(Str1, Counter, 1)
+            Count = 0
+            For counting = 1 To Len(Str1)
+                thisChar = Mid(Str1, counting, 1)
+                If thisChar = nextChar Then Count = Count + 1
+            Next
+
+            If Count > High Then
+                High = Count
+                character = nextChar
+            End If
+        Next
+
+
+        Console.WriteLine(character & " came " & High & " number of times.")
+        Console.ReadKey()
+    End Sub
+
+End Module
